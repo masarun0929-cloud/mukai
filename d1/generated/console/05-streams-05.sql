@@ -1,6 +1,3 @@
--- Console chunk: streams 5
--- Run d1/schema.sql first. Then run console chunks in file-name order.
-
 INSERT INTO stream_songs (stream_id, song_id, position, raw_text, title_snapshot, artist_snapshot, song_key_snapshot) VALUES ((SELECT id FROM streams WHERE channel_id = (SELECT id FROM channels WHERE code = 'new') AND streamed_on = '2025-08-31' AND url_key = 'HMP-Y3lEVGI'), (SELECT id FROM songs WHERE song_key = '夏恋花火__40mp feat. 初音ミク'), 13, '夏恋花火', '夏恋花火', '40mP feat. 初音ミク', '夏恋花火__40mp feat. 初音ミク');
 INSERT INTO streams (channel_id, source_index, streamed_on, title, url, url_key, song_count) VALUES ((SELECT id FROM channels WHERE code = 'new'), 15, '2025-09-02', '9月最初の歌枠!アニソンやバンド曲でテンション上げてこ~~!🎤🌟🐏', 'https://www.youtube.com/live/GaZnPET_U3c?si=LYcWyqriUPbIq8FG', 'GaZnPET_U3c', 15)
 ON CONFLICT(channel_id, streamed_on, url_key) DO UPDATE SET
