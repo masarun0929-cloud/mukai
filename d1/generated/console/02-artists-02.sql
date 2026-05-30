@@ -1,6 +1,3 @@
--- Console chunk: artists 2
--- Run d1/schema.sql first. Then run console chunks in file-name order.
-
 INSERT INTO artists (name, normalized_name) VALUES ('ランカ・リー=中島愛', 'ランカ・リー=中島愛')
 ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
 INSERT INTO artists (name, normalized_name) VALUES ('レフティーモンスターP feat.GUMI', 'レフティーモンスターp feat.gumi')
