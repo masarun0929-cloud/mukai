@@ -1,6 +1,3 @@
--- Console chunk: streams 9
--- Run d1/schema.sql first. Then run console chunks in file-name order.
-
 INSERT INTO stream_songs (stream_id, song_id, position, raw_text, title_snapshot, artist_snapshot, song_key_snapshot) VALUES ((SELECT id FROM streams WHERE channel_id = (SELECT id FROM channels WHERE code = 'new') AND streamed_on = '2026-02-13' AND url_key = 'hrYgxnO7bkE'), (SELECT id FROM songs WHERE song_key = 'ハピチョコ__fruits zipper'), 5, 'ハピチョコ', 'ハピチョコ', 'FRUITS ZIPPER', 'ハピチョコ__fruits zipper');
 INSERT INTO stream_songs (stream_id, song_id, position, raw_text, title_snapshot, artist_snapshot, song_key_snapshot) VALUES ((SELECT id FROM streams WHERE channel_id = (SELECT id FROM channels WHERE code = 'new') AND streamed_on = '2026-02-13' AND url_key = 'hrYgxnO7bkE'), (SELECT id FROM songs WHERE song_key = '心予報__eve'), 6, '心予報', '心予報', 'Eve', '心予報__eve');
 INSERT INTO stream_songs (stream_id, song_id, position, raw_text, title_snapshot, artist_snapshot, song_key_snapshot) VALUES ((SELECT id FROM streams WHERE channel_id = (SELECT id FROM channels WHERE code = 'new') AND streamed_on = '2026-02-13' AND url_key = 'hrYgxnO7bkE'), (SELECT id FROM songs WHERE song_key = '恋愛裁判__40mp feat.初音ミク'), 7, '恋愛裁判', '恋愛裁判', '40mP feat.初音ミク', '恋愛裁判__40mp feat.初音ミク');
