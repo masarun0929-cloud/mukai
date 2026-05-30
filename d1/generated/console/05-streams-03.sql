@@ -1,6 +1,3 @@
--- Console chunk: streams 3
--- Run d1/schema.sql first. Then run console chunks in file-name order.
-
 INSERT INTO stream_songs (stream_id, song_id, position, raw_text, title_snapshot, artist_snapshot, song_key_snapshot) VALUES ((SELECT id FROM streams WHERE channel_id = (SELECT id FROM channels WHERE code = 'new') AND streamed_on = '2025-06-03' AND url_key = '5R9TMMngwEM'), (SELECT id FROM songs WHERE song_key = '366日__hy'), 2, '366日', '366日', 'HY', '366日__hy');
 INSERT INTO stream_songs (stream_id, song_id, position, raw_text, title_snapshot, artist_snapshot, song_key_snapshot) VALUES ((SELECT id FROM streams WHERE channel_id = (SELECT id FROM channels WHERE code = 'new') AND streamed_on = '2025-06-03' AND url_key = '5R9TMMngwEM'), (SELECT id FROM songs WHERE song_key = 'ドライフラワー__優里'), 3, 'ドライフラワー', 'ドライフラワー', '優里', 'ドライフラワー__優里');
 INSERT INTO stream_songs (stream_id, song_id, position, raw_text, title_snapshot, artist_snapshot, song_key_snapshot) VALUES ((SELECT id FROM streams WHERE channel_id = (SELECT id FROM channels WHERE code = 'new') AND streamed_on = '2025-06-03' AND url_key = '5R9TMMngwEM'), (SELECT id FROM songs WHERE song_key = 'ひまわりの約束__秦基博'), 4, 'ひまわりの約束', 'ひまわりの約束', '秦基博', 'ひまわりの約束__秦基博');
