@@ -1,6 +1,3 @@
--- Console chunk: streams 7
--- Run d1/schema.sql first. Then run console chunks in file-name order.
-
 INSERT INTO stream_songs (stream_id, song_id, position, raw_text, title_snapshot, artist_snapshot, song_key_snapshot) VALUES ((SELECT id FROM streams WHERE channel_id = (SELECT id FROM channels WHERE code = 'new') AND streamed_on = '2025-11-28' AND url_key = 'oUSOaxy1IBU'), (SELECT id FROM songs WHERE song_key = 'can do__granrodeo'), 2, 'Can Do', 'Can Do', 'GRANRODEO', 'can do__granrodeo');
 INSERT INTO stream_songs (stream_id, song_id, position, raw_text, title_snapshot, artist_snapshot, song_key_snapshot) VALUES ((SELECT id FROM streams WHERE channel_id = (SELECT id FROM channels WHERE code = 'new') AND streamed_on = '2025-11-28' AND url_key = 'oUSOaxy1IBU'), (SELECT id FROM songs WHERE song_key = '雨とペトラ__バルーン feat. v flower'), 3, '雨とペトラ', '雨とペトラ', 'バルーン feat. v flower', '雨とペトラ__バルーン feat. v flower');
 INSERT INTO stream_songs (stream_id, song_id, position, raw_text, title_snapshot, artist_snapshot, song_key_snapshot) VALUES ((SELECT id FROM streams WHERE channel_id = (SELECT id FROM channels WHERE code = 'new') AND streamed_on = '2025-11-28' AND url_key = 'oUSOaxy1IBU'), (SELECT id FROM songs WHERE song_key = '朝を呑む__バルーン feat. 初音ミク'), 4, '朝を呑む', '朝を呑む', 'バルーン feat. 初音ミク', '朝を呑む__バルーン feat. 初音ミク');
