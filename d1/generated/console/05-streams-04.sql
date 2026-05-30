@@ -1,6 +1,3 @@
--- Console chunk: streams 4
--- Run d1/schema.sql first. Then run console chunks in file-name order.
-
 INSERT INTO stream_songs (stream_id, song_id, position, raw_text, title_snapshot, artist_snapshot, song_key_snapshot) VALUES ((SELECT id FROM streams WHERE channel_id = (SELECT id FROM channels WHERE code = 'new') AND streamed_on = '2025-07-31' AND url_key = 'BN0hOFxGr3E'), (SELECT id FROM songs WHERE song_key = '林檎売りの泡沫少女__yukkedoluce feat. gumi'), 5, '林檎売りの泡沫少女', '林檎売りの泡沫少女', 'yukkedoluce feat. GUMI', '林檎売りの泡沫少女__yukkedoluce feat. gumi');
 INSERT INTO stream_songs (stream_id, song_id, position, raw_text, title_snapshot, artist_snapshot, song_key_snapshot) VALUES ((SELECT id FROM streams WHERE channel_id = (SELECT id FROM channels WHERE code = 'new') AND streamed_on = '2025-07-31' AND url_key = 'BN0hOFxGr3E'), (SELECT id FROM songs WHERE song_key = '星が瞬くこんな夜に__supercell'), 6, '星が瞬くこんな夜に', '星が瞬くこんな夜に', 'supercell', '星が瞬くこんな夜に__supercell');
 INSERT INTO stream_songs (stream_id, song_id, position, raw_text, title_snapshot, artist_snapshot, song_key_snapshot) VALUES ((SELECT id FROM streams WHERE channel_id = (SELECT id FROM channels WHERE code = 'new') AND streamed_on = '2025-07-31' AND url_key = 'BN0hOFxGr3E'), (SELECT id FROM songs WHERE song_key = 'shout baby__緑黄色社会'), 7, 'Shout Baby', 'Shout Baby', '緑黄色社会', 'shout baby__緑黄色社会');
