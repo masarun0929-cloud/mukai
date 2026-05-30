@@ -1,6 +1,3 @@
--- Console chunk: streams 1
--- Run d1/schema.sql first. Then run console chunks in file-name order.
-
 INSERT INTO streams (channel_id, source_index, streamed_on, title, url, url_key, song_count) VALUES ((SELECT id FROM channels WHERE code = 'new'), 1, '2025-04-13', 'むかいせな 活動3周年記念🌸YouTube初配信🐏🍞思い出の曲たくさん歌います', 'https://www.youtube.com/live/RfRgwpksJUI?si=qC-Y8cdIhwj6Ey8y', 'RfRgwpksJUI', 19)
 ON CONFLICT(channel_id, streamed_on, url_key) DO UPDATE SET
   source_index = excluded.source_index,
