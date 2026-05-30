@@ -1,6 +1,3 @@
--- Console chunk: streams 8
--- Run d1/schema.sql first. Then run console chunks in file-name order.
-
 DELETE FROM stream_songs WHERE stream_id = (SELECT id FROM streams WHERE channel_id = (SELECT id FROM channels WHERE code = 'new') AND streamed_on = '2026-01-14' AND url_key = 'L6TklwfxkmY');
 INSERT INTO stream_songs (stream_id, song_id, position, raw_text, title_snapshot, artist_snapshot, song_key_snapshot) VALUES ((SELECT id FROM streams WHERE channel_id = (SELECT id FROM channels WHERE code = 'new') AND streamed_on = '2026-01-14' AND url_key = 'L6TklwfxkmY'), (SELECT id FROM songs WHERE song_key = 'watch me!__yoasobi'), 1, 'Watch me!', 'Watch me!', 'YOASOBI', 'watch me!__yoasobi');
 INSERT INTO stream_songs (stream_id, song_id, position, raw_text, title_snapshot, artist_snapshot, song_key_snapshot) VALUES ((SELECT id FROM streams WHERE channel_id = (SELECT id FROM channels WHERE code = 'new') AND streamed_on = '2026-01-14' AND url_key = 'L6TklwfxkmY'), (SELECT id FROM songs WHERE song_key = '春泥棒__ヨルシカ'), 2, '春泥棒', '春泥棒', 'ヨルシカ', '春泥棒__ヨルシカ');
