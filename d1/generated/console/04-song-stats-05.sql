@@ -1,6 +1,3 @@
--- Console chunk: song-stats 5
--- Run d1/schema.sql first. Then run console chunks in file-name order.
-
 INSERT INTO song_channel_stats (song_id, channel_id, sing_count, source_index, updated_at) VALUES ((SELECT id FROM songs WHERE song_key = '盛れ!ミ・アモーレ__juice=juice'), (SELECT id FROM channels WHERE code = 'new'), 1, 242, CURRENT_TIMESTAMP)
 ON CONFLICT(song_id, channel_id) DO UPDATE SET
   sing_count = excluded.sing_count,
