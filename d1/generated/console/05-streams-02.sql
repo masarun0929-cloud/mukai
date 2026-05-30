@@ -1,6 +1,3 @@
--- Console chunk: streams 2
--- Run d1/schema.sql first. Then run console chunks in file-name order.
-
 INSERT INTO stream_songs (stream_id, song_id, position, raw_text, title_snapshot, artist_snapshot, song_key_snapshot) VALUES ((SELECT id FROM streams WHERE channel_id = (SELECT id FROM channels WHERE code = 'new') AND streamed_on = '2025-04-30' AND url_key = 'w2KfkD4XHPA'), (SELECT id FROM songs WHERE song_key = 'ゴーストルール__deco*27 feat. 初音ミク'), 8, 'ゴーストルール', 'ゴーストルール', 'DECO*27 feat. 初音ミク', 'ゴーストルール__deco*27 feat. 初音ミク');
 INSERT INTO stream_songs (stream_id, song_id, position, raw_text, title_snapshot, artist_snapshot, song_key_snapshot) VALUES ((SELECT id FROM streams WHERE channel_id = (SELECT id FROM channels WHERE code = 'new') AND streamed_on = '2025-04-30' AND url_key = 'w2KfkD4XHPA'), (SELECT id FROM songs WHERE song_key = 'ヒバナ__deco*27 feat. 初音ミク'), 9, 'ヒバナ', 'ヒバナ', 'DECO*27 feat. 初音ミク', 'ヒバナ__deco*27 feat. 初音ミク');
 INSERT INTO stream_songs (stream_id, song_id, position, raw_text, title_snapshot, artist_snapshot, song_key_snapshot) VALUES ((SELECT id FROM streams WHERE channel_id = (SELECT id FROM channels WHERE code = 'new') AND streamed_on = '2025-04-30' AND url_key = 'w2KfkD4XHPA'), (SELECT id FROM songs WHERE song_key = '命のユースティティア__neru feat. 鏡音レン'), 10, '命のユースティティア', '命のユースティティア', 'Neru feat. 鏡音レン', '命のユースティティア__neru feat. 鏡音レン');
