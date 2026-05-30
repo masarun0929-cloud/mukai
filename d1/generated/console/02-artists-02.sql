@@ -1,0 +1,99 @@
+-- Console chunk: artists 2
+-- Run d1/schema.sql first. Then run console chunks in file-name order.
+
+INSERT INTO artists (name, normalized_name) VALUES ('ランカ・リー=中島愛', 'ランカ・リー=中島愛')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('レフティーモンスターP feat.GUMI', 'レフティーモンスターp feat.gumi')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('れるりり feat. GUMI', 'れるりり feat. gumi')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('わーすた', 'わーすた')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('ワルキューレ', 'ワルキューレ')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('絢香', '絢香')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('絢瀬絵里(CV.南條愛乃)', '絢瀬絵里(cv.南條愛乃)')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('案山子 feat. 初音ミク', '案山子 feat. 初音ミク')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('一青窈', '一青窈')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('園田海未(CV.三森すずこ)', '園田海未(cv.三森すずこ)')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('園田海未(CV.三森すずこ)&絢瀬絵里(CV.南條愛乃)', '園田海未(cv.三森すずこ)&絢瀬絵里(cv.南條愛乃)')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('家入レオ', '家入レオ')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('茅原実里', '茅原実里')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('桑田佳祐', '桑田佳祐')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('結束バンド', '結束バンド')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('高坂穂乃果(CV.新田恵海)&星空凛(CV.飯田里穂)', '高坂穂乃果(cv.新田恵海)&星空凛(cv.飯田里穂)')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('桜高軽音部', '桜高軽音部')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('桜島麻衣(CV.瀬戸麻沙美),古賀朋絵(CV.東山奈央),双葉理央(CV.種崎敦美),豊浜のどか(CV.内田真礼),梓川かえで(CV.久保ユリカ),牧之原翔子(CV.水瀬いのり)', '桜島麻衣(cv.瀬戸麻沙美),古賀朋絵(cv.東山奈央),双葉理央(cv.種崎敦美),豊浜のどか(cv.内田真礼),梓川かえで(cv.久保ユリカ),牧之原翔子(cv.水瀬いのり)')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('手嶌葵', '手嶌葵')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('松浦亜弥', '松浦亜弥')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('松田聖子', '松田聖子')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('神宿', '神宿')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('秦基博', '秦基博')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('須田景凪', '須田景凪')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('水樹奈々', '水樹奈々')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('水瀬いのり', '水瀬いのり')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('星街すいせい', '星街すいせい')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('星空凛(CV.飯田里穂)', '星空凛(cv.飯田里穂)')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('星野源', '星野源')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('西木野真姫(CV.Pile),園田海未(CV.三森すずこ)&絢瀬絵里(CV.南條愛乃)', '西木野真姫(cv.pile),園田海未(cv.三森すずこ)&絢瀬絵里(cv.南條愛乃)')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('石風呂 feat.初音ミク', '石風呂 feat.初音ミク')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('千石撫子(CV.花澤香菜)', '千石撫子(cv.花澤香菜)')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('奏音69 feat. 巡音ルカ', '奏音69 feat. 巡音ルカ')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('中島美嘉', '中島美嘉')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('蝶々P feat. GUMI', '蝶々p feat. gumi')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('超ときめき♡宣伝部', '超ときめき♡宣伝部')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('椎名林檎', '椎名林檎')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('東京事変', '東京事変')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('南ことり(CV.内田彩)', '南ことり(cv.内田彩)')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('美風藍(CV.蒼井翔太)', '美風藍(cv.蒼井翔太)')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('柊キライ feat. v flower', '柊キライ feat. v flower')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('米津玄師', '米津玄師')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('放課後ティータイム', '放課後ティータイム')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('優里', '優里')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('涼宮ハルヒ(CV.平野綾)', '涼宮ハルヒ(cv.平野綾)')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('緑黄色社会', '緑黄色社会')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('髏々宮カルタ(CV.花澤香菜)', '髏々宮カルタ(cv.花澤香菜)')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;
+INSERT INTO artists (name, normalized_name) VALUES ('μ''s', 'μ''s')
+ON CONFLICT(normalized_name) DO UPDATE SET name = excluded.name;

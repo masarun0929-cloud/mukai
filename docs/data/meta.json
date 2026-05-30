@@ -1,0 +1,31 @@
+{
+  "generatedAt": "2026-05-27T22:31:21.080Z",
+  "channels": {
+    "new": {
+      "title": "むかいせな　歌唱データベース",
+      "updateText": "データ更新日：2026/05/28",
+      "updateDate": "2026-05-28",
+      "generatedAt": "2026-05-27T22:31:21.080Z",
+      "total": 393,
+      "repertoire": 282,
+      "streams": 32,
+      "avgPerStream": 12,
+      "channelId": "new",
+      "channelLabel": "歌った曲リスト",
+      "keyPublished": false
+    }
+  },
+  "combined": {
+    "title": "むかいせな　歌唱データベース",
+    "updateText": "データ更新日：2026/05/28",
+    "updateDate": "2026-05-28",
+    "generatedAt": "2026-05-27T22:31:21.080Z",
+    "total": 393,
+    "repertoire": 282,
+    "streams": 32,
+    "avgPerStream": 12,
+    "channelId": "new",
+    "channelLabel": "歌った曲リスト",
+    "keyPublished": false
+  }
+}
