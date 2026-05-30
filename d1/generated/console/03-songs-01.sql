@@ -1,6 +1,3 @@
--- Console chunk: songs 1
--- Run d1/schema.sql first. Then run console chunks in file-name order.
-
 INSERT INTO songs (title, normalized_title, artist_id, song_key, genre) VALUES ('I wonder', 'i wonder', (SELECT id FROM artists WHERE normalized_name = 'da-ice'), 'i wonder__da-ice', 'J-POP')
 ON CONFLICT(song_key) DO UPDATE SET
   title = excluded.title,
