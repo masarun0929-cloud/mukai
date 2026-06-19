@@ -1,6 +1,6 @@
 import { state } from '../store.js';
 import { $, escapeHtml, fmtDate, fmtMonth, monthKey } from '../utils.js';
-import { TOP_ARTISTS_LIMIT } from '../config.js';
+import { TOP_ARTISTS_LIMIT } from '../config.js?v=20260619-sena-music-date';
 import { createChart, chartCanvas, getColors } from '../charts.js';
 import { deriveArtists, computeComebacks } from '../domain-compat.js';
 import { icon } from '../icons.js';

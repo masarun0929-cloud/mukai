@@ -1,5 +1,5 @@
 import { state } from '../store.js';
-import { TIMELINE_INITIAL, TIMELINE_STEP } from '../config.js';
+import { TIMELINE_INITIAL, TIMELINE_STEP } from '../config.js?v=20260619-sena-music-date';
 import { $, $$, escapeHtml, fmtDate, streamKey } from '../utils.js';
 import { isStreamInAnyPlaylist } from './playlists.js';
 import { icon } from '../icons.js';

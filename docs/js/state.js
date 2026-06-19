@@ -1,4 +1,4 @@
-import { SITE } from './config.js';
+import { SITE } from './config.js?v=20260619-sena-music-date';
 
 const FAVORITES_KEY = `${SITE.storagePrefix}-favorites-v1`;
 

@@ -13,7 +13,7 @@
 import { state } from '../store.js';
 import { $, escapeHtml, fmtDate, streamKey, youtubeThumb, youtubeThumbFallback, youtubeVideoId } from '../utils.js';
 import { icon } from '../icons.js';
-import { SITE } from '../config.js';
+import { SITE } from '../config.js?v=20260619-sena-music-date';
 
 const STORAGE_KEY = `${SITE.storagePrefix}-playlists`;
 const MUSIC_CACHE_KEY = `${SITE.storagePrefix}-music-videos-cache-v2`;

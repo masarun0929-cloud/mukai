@@ -1,6 +1,6 @@
 import { parseQuery, matchReasons, applyFieldFilters, filterByTextIncludes } from './domain-compat.js';
 import { ensureSongsTags } from './tagging.js';
-import { SITE } from './config.js';
+import { SITE } from './config.js?v=20260619-sena-music-date';
 
 const SEARCH_HISTORY_KEY = `${SITE.storagePrefix}-search-history-v1`;
 const MAX_HISTORY = 10;

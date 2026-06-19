@@ -1,7 +1,7 @@
 import { initTheme } from './theme.js';
 import { $, fmtDate, formatNumber } from './utils.js';
 import { loadAll } from './data.js';
-import { CHANNELS, DEFAULT_CHANNEL } from './config.js';
+import { CHANNELS, DEFAULT_CHANNEL } from './config.js?v=20260619-sena-music-date';
 import { state } from './store.js';
 import { collectDatasetIssues } from './domain-compat.js';
 

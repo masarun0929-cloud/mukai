@@ -5,7 +5,7 @@ import { search, matchReasons, getSearchHistory, addSearchHistory, removeSearchH
 import { writeUrlState } from '../url-state.js';
 import { applyGenreFilter, applyTagFilter, applySingerMode, sortSongs, setlistBalance } from '../domain-compat.js';
 import { icon } from '../icons.js';
-import { SITE } from '../config.js';
+import { SITE } from '../config.js?v=20260619-sena-music-date';
 
 let searchInputEl, sortSelectEl, genreSelectEl, filterButtonsEl, genreChipsEl, listEl, countEl, moreBtnWrap;
 let searchHistoryDropdown = null;

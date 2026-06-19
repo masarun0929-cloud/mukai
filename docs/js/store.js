@@ -14,7 +14,7 @@
 
 // ─── URL直列化可能な状態 (SSoT = URL) ────────────────────────────────────────
 
-import { SITE } from './config.js';
+import { SITE } from './config.js?v=20260619-sena-music-date';
 
 const VALID_TABS = new Set(['dashboard', 'ranking', 'songs', 'timeline', 'analytics', 'playlists']);
 const FAVORITES_KEY = `${SITE.storagePrefix}-favorites-v1`;

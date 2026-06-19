@@ -1,6 +1,6 @@
 import { state } from '../store.js';
 import { $, escapeHtml, fmtDate, daysClass } from '../utils.js';
-import { RANKING_LIST_LIMIT } from '../config.js';
+import { RANKING_LIST_LIMIT } from '../config.js?v=20260619-sena-music-date';
 import { icon } from '../icons.js';
 
 // ──────────────────────────────────────────────────────────────────────────────

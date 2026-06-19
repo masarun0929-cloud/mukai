@@ -4,7 +4,7 @@ import { buildIndex } from './search.js';
 import { initTheme, onThemeChange, cycleTheme } from './theme.js';
 import { onRerenderNeeded, destroyAllCharts } from './charts.js';
 import { $, $$, escapeHtml, fmtDate, daysSince, isLink, formatNumber, streamKey, youtubeVideoId, youtubeThumb, youtubeThumbFallback } from './utils.js';
-import { CHANNELS, DEFAULT_CHANNEL, SITE } from './config.js';
+import { CHANNELS, DEFAULT_CHANNEL, SITE } from './config.js?v=20260619-sena-music-date';
 import { readUrlState, writeUrlState } from './url-state.js';
 import { initSearchPalette, openSearchPalette, closeSearchPalette, isSearchPaletteOpen } from './views/search-palette.js';
 import { icon } from './icons.js';
@@ -13,12 +13,12 @@ initTheme();
 initStore();
 
 const VIEW_LOADERS = {
-  dashboard: () => import('./views/dashboard.js').then(m => m.renderDashboard),
-  ranking:   () => import('./views/ranking.js').then(m => m.renderRanking),
-  songs:     () => import('./views/songs.js').then(m => m.renderSongs),
-  timeline:  () => import('./views/timeline.js').then(m => m.renderTimeline),
-  analytics: () => import('./views/analytics.js').then(m => m.renderAnalytics),
-  playlists: () => import('./views/playlists.js').then(m => m.renderPlaylists),
+  dashboard: () => import('./views/dashboard-sena.js?v=20260619-sena-music-date').then(m => m.renderDashboard),
+  ranking:   () => import('./views/ranking.js?v=20260619-sena-music-date').then(m => m.renderRanking),
+  songs:     () => import('./views/songs.js?v=20260619-sena-music-date').then(m => m.renderSongs),
+  timeline:  () => import('./views/timeline.js?v=20260619-sena-music-date').then(m => m.renderTimeline),
+  analytics: () => import('./views/analytics.js?v=20260619-sena-music-date').then(m => m.renderAnalytics),
+  playlists: () => import('./views/playlists.js?v=20260619-sena-music-date').then(m => m.renderPlaylists),
 };
 const rendererCache = new Map();
 let renderToken = 0;
@@ -3123,12 +3123,16 @@ const CH_INFO = {
     url: 'https://www.youtube.com/@_mukai_sena_',
     label: 'YouTube',
     desc: CHANNELS.new.intro,
-    links: [
-      { icon: '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.58 7.17a2.51 2.51 0 0 0-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.4A2.51 2.51 0 0 0 2.42 7.17 26.9 26.9 0 0 0 2 12a26.9 26.9 0 0 0 .42 4.83 2.51 2.51 0 0 0 1.77 1.77c1.56.4 7.81.4 7.81.4s6.25 0 7.81-.4a2.51 2.51 0 0 0 1.77-1.77A26.9 26.9 0 0 0 22 12a26.9 26.9 0 0 0-.42-4.83ZM10 15.43V8.57L16 12l-6 3.43Z"/></svg>', label: 'YouTube', url: 'https://www.youtube.com/@_mukai_sena_' },
-      { icon: '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>', label: 'X', url: 'https://x.com/_mukai_sena_' },
-      { icon: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.1 0l2.8-2.8a5 5 0 0 0-7.1-7.1l-1.6 1.6"/><path d="M14 11a5 5 0 0 0-7.1 0l-2.8 2.8a5 5 0 0 0 7.1 7.1l1.6-1.6"/></svg>', label: 'lit.link', url: 'https://lit.link/_mukai_sena_' },
-      { icon: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5h16v11H8l-4 4V5Z"/><path d="M8 9h8"/><path d="M8 13h5"/></svg>', label: 'ツイキャス', url: 'https://twitcasting.tv/_mukai_sena_' },
-    ],
+    links: SITE.officialLinks.map(link => ({
+      ...link,
+      icon: link.label === 'YouTube'
+        ? '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.58 7.17a2.51 2.51 0 0 0-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.4A2.51 2.51 0 0 0 2.42 7.17 26.9 26.9 0 0 0 2 12a26.9 26.9 0 0 0 .42 4.83 2.51 2.51 0 0 0 1.77 1.77c1.56.4 7.81.4 7.81.4s6.25 0 7.81-.4a2.51 2.51 0 0 0 1.77-1.77A26.9 26.9 0 0 0 22 12a26.9 26.9 0 0 0-.42-4.83ZM10 15.43V8.57L16 12l-6 3.43Z"/></svg>'
+        : link.label === 'X'
+          ? '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>'
+          : link.label === 'ツイキャス'
+            ? '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5h16v11H8l-4 4V5Z"/><path d="M8 9h8"/><path d="M8 13h5"/></svg>'
+            : '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.1 0l2.8-2.8a5 5 0 0 0-7.1-7.1l-1.6 1.6"/><path d="M14 11a5 5 0 0 0-7.1 0l-2.8 2.8a5 5 0 0 0 7.1 7.1l1.6-1.6"/></svg>',
+    })),
     avatarUrl: CHANNELS.new.avatarUrl,
     bannerUrl: CHANNELS.new.bannerUrl,
   },
