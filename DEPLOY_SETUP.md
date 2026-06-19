@@ -182,7 +182,7 @@ Cloudflare PagesがGitHub repositoryに接続されていれば、push後に自�
 ADMIN_TOKEN=好きな管理用パスワード
 GITHUB_ACTIONS_TOKEN=GitHub Fine-grained Personal Access Token
 GITHUB_OWNER=masarun0929-cloud
-GITHUB_REPO=GitHub repository名
+GITHUB_REPO=mukai
 GITHUB_STATIC_WORKFLOW=update-static-data.yml
 GITHUB_STATIC_REF=main
 ```

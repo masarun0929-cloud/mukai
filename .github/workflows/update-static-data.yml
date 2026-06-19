@@ -2,6 +2,15 @@ name: Update static data
 
 on:
   workflow_dispatch:
+    inputs:
+      source:
+        description: Request source
+        required: false
+        default: manual
+      requested_at:
+        description: Request timestamp
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -10,9 +19,13 @@ jobs:
   update-static-data:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
           node-version: 20
 
@@ -24,6 +37,8 @@ jobs:
         run: node tools/generate_static_data.mjs
 
       - name: Commit and push static data
+        env:
+          TARGET_REF: ${{ github.ref_name }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -32,5 +47,5 @@ jobs:
             echo "No static data changes."
           else
             git commit -m "Update static data"
-            git push
+            git push origin "HEAD:${TARGET_REF}"
           fi
