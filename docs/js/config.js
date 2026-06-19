@@ -3,17 +3,19 @@
 export const SITE = {
   creatorName: 'むかいせな',
   databaseName: '歌唱データベース',
-  heroIcon: '',
-  tagline: '~ Mukai Sena Song Archive ~',
-  editionLabel: 'Mukai Sena',
+  heroIcon: '♪',
+  tagline: '~ Sena Song Archive ~',
+  editionLabel: 'Local Preview',
   baseUrl: './',
-  description: 'むかいせなさんの歌った曲リスト、ランキング、検索をまとめた歌唱データベース。',
-  fanLabel: 'ほくほくめろんぱん',
-  contactUrl: '#',
+  description: 'むかいせなさんの歌った曲リスト、ランキング、検索をまとめたファンメイド歌唱データベース。',
+  fanLabel: 'むかいせな ファン',
+  contactUrl: 'https://lit.link/senyanyann',
   storagePrefix: 'mukai-sena-songlist',
   officialLinks: [
     { label: 'YouTube', url: 'https://www.youtube.com/@_mukai_sena_', className: 'youtube' },
     { label: 'X', url: 'https://x.com/_mukai_sena_', className: 'x-link' },
+    { label: 'lit.link', url: 'https://lit.link/senyanyann', className: 'litlink' },
+    { label: 'ツイキャス', url: 'https://twitcasting.tv/_mukai_sena_', className: 'twitcasting' },
   ],
 };
 
@@ -25,6 +27,26 @@ export const CHANNELS = {
     label: '歌った曲リスト',
     listGid: '0',
     setlistGid: 'replace_with_main_setlist_gid',
+    handle: '@_mukai_sena_',
+    avatarUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXuCN0AS86TMakORxiPH1b3w7QT0k3K3LUgw&s',
+    bannerUrl: 'https://yt3.googleusercontent.com/imrQX7e0Mz6GlNsHu0ufCrQ0PhOrQXPPLO9lfC2vNbLm4a7z2idMkaBIU8cqG4_mfM-3yujK4w=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj',
+    intro: [
+      'あなたに届けたいしゃらんら～！',
+      '歌うひつじの魔法使いむかいせなと申します',
+      '',
+      'お歌とお芝居とアイドルが大好きです',
+      '',
+      '色々なリンクまとめ',
+      'https://lit.link/senyanyann',
+      '',
+      'SHOWROOM（お休み中）',
+      'https://www.showroom-live.com/L00559_CHET_senyanyann66?t=1668417451',
+      '',
+      'ツイキャス（まったりな時）',
+      'https://twitcasting.tv/_mukai_sena_',
+      '',
+      'お仕事依頼（歌唱依頼、ボイスドラマ、ゲーム、イメージボイス、ナレーションなど）や、一緒に作品を作ってくださる方はリンク先の連絡先までご連絡ください。',
+    ].join('\n'),
   },
 };
 
@@ -54,7 +76,7 @@ export const ACTIVITY_RECENT_LIMIT = 5;
 export const DAYS_FRESH = 30;
 export const DAYS_STALE = 180;
 
-export const SOURCE_URL = '';
+export const SOURCE_URL = './songlist.csv';
 
 export const gvizUrl = (gid) =>
   `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&gid=${gid}&_t=${Date.now()}`;

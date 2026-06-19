@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>歌枠管理｜一色イズ　歌唱データベース</title>
+<title>歌枠管理｜むかいせな 歌唱データベース</title>
 <meta name="robots" content="noindex">
 <link rel="icon" type="image/svg+xml" href="assets/site-icon.svg">
 <link rel="stylesheet" href="css/theme.css">
@@ -35,7 +35,7 @@
   <section class="admin-hero">
     <div>
       <h1>歌枠管理</h1>
-      <p>スマホから歌枠・リアルライブ情報・ジャンルをD1へ追加し、静的JSON生成を開始できます。</p>
+      <p>スマホから歌枠・ジャンルをD1へ追加し、静的JSON生成を開始できます。</p>
     </div>
     <button class="btn primary" id="refresh-status" type="button">再チェック</button>
   </section>
@@ -60,24 +60,6 @@
     </div>
     <p class="admin-note" id="stream-status"></p>
     <div id="preview-box"></div>
-  </section>
-
-  <section class="admin-panel">
-    <div class="section-header">
-      <h2>リアルライブ情報</h2>
-      <span class="badge accent">ライブ情報</span>
-    </div>
-    <p class="admin-note">公開サイトの「ライブ情報」タブに表示する閲覧専用データをD1へ追加します。</p>
-    <div class="admin-form-grid">
-      <label>ライブ日<input id="live-performed-on" type="date"></label>
-      <label>ライブ番号<input id="live-source-index" type="number" min="1" placeholder="空なら自動採番"></label>
-      <label>ライブ名称<input id="live-title" type="text"></label>
-    </div>
-    <label class="admin-field-full">ライブセトリ<textarea id="live-songs-text" placeholder="曲名 / アーティスト&#10;曲名だけでも既存曲が1件なら紐づきます"></textarea></label>
-    <div class="admin-actions">
-      <button class="btn primary" id="submit-live" type="button">ライブ情報を登録</button>
-    </div>
-    <p class="admin-note" id="live-status"></p>
   </section>
 
   <section class="admin-panel">
@@ -218,6 +200,6 @@ $env:SONGLIST_NEW_SETLIST_GID="123456789"</code></pre>
   </section>
 </main>
 
-<script type="module" src="js/admin.js"></script>
+<script type="module" src="js/admin.js?v=20260619-mukai-sena"></script>
 </body>
 </html>
